@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FU tech</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <style type="text/css">
+    .table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+    width:20%;
+    display: inline !important;
+  }
+  .actions .btn{
+    width:36%;
+    margin:1.5em 0;
+  }
+  
+  .actions .btn-info{
+    float:left;
+  }
+  .actions .btn-danger{
+    float:right;
+  }
+  
+  table#cart thead { display: none; }
+  table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+  table#cart tbody tr td:first-child { background: #333; color: #fff; }
+  table#cart tbody td:before {
+    content: attr(data-th); font-weight: bold;
+    display: inline-block; width: 8rem;
+  }
+  
+  
+  
+  table#cart tfoot td{display:block; }
+  table#cart tfoot td .btn{display:block;}
+  
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="pocetna.html">FU tech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="pocetna.html">Pocetna<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="onama.html">O nama</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Usluge </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="fiskalni.html">Fiskalni uredjaji</a>
+                <a class="dropdown-item" href="obuka.html">Obuka i instalacija</a>
+                <a class="dropdown-item" href="servis.html">Servis</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prijava.html">Prijavljivanje</a>
+          </li>
+          <li class="nav-item">
+            <span>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Pretraga">
+            </span>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-info" data-toggle="dropdown">
+             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Korpa <span class="badge badge-pill badge-danger">1</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+    <div class="container">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+        <tr>
+          <th style="width:50%">Proizvod</th>
+          <th style="width:10%">Cena</th>
+          <th style="width:8%">Količina</th>
+          <th style="width:22%" class="text-center">Suma stavke</th>
+          <th style="width:10%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-th="Product">
+            <div class="row">
+              <div class="col-sm-2 hidden-xs"><img src="5.jpg" alt="..." style="max-width: 140%" class="img-responsive"/></div>
+              <div class="col-sm-10">
+                <h4 class="nomargin">Proizvod br. 1</h4>
+                <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </td>
+          <td data-th="Cena">43.999 din</td>
+          <td data-th="Količina">
+            <input type="number" class="form-control text-center" value="1">
+          </td>
+          <td data-th="Suma stavke" class="text-center">43.999</td>
+          <td class="actions" data-th="">
+            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>                
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="visible-xs">
+          <td class="text-center"><strong></strong></td>
+        </tr>
+        <tr>
+          <td><a href="fiskalni.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Nastavi kupovinu </a></td>
+          <td colspan="2" class="hidden-xs"></td>
+          <td class="hidden-xs text-center"><strong>Ukupno: 43.999 din</strong></td>
+          <td><a href="#" class="btn btn-success btn-block"> Kupi <i class="fa fa-angle-right"></i></a></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
