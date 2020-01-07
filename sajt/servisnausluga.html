@@ -21,6 +21,63 @@
 
 
   <style type="text/css">
+    form_main {
+    width: 100%;
+}
+.form_main h4 {
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.heading {
+    border-bottom: 1px solid #fcab0e;
+    padding-bottom: 9px;
+    position: relative;
+}
+.heading span {
+    background: #9e6600 none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 75px;
+}   
+.form {
+    border-radius: 7px;
+    padding: 6px;
+}
+.txt[type="text"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+.txt_3[type="text"] {
+    margin: 10px 0 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+.txt2[type="submit"] {
+    background: #242424 none repeat scroll 0 0;
+    border: 1px solid #4f5c04;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 30%;
+}
+.txt2:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #5793ef;
+    transition: all 0.5s ease 0s;
+}
 
   </style>
 
@@ -79,17 +136,35 @@
   </nav>
 
   <!-- Page Content -->
-   <div class="container">
-    <br>
-    <div class="row">
-      <div class="col-md-8 mb-5">
-        <h2>Servis</h2>
-        <hr>
-        <p> <em>FU tech</em> se bavi održavanjem opreme i sva potrebna pomoć se ažurno prate po terminima prijave kvarova i zahteva za drugim vidovima pomoći. Korisniku se istovremeno omogućuju potrebne informacije o preduzetim akcijama i statusu prijavljenog kvara. U zavisnosti od vrste kvarova mogu biti otklonjeni na licu mesta ili tek nakon donošenja uređaja u servis.</p>
-        <a href="servisnausluga.html" class="btn btn-success">Zahtev za servisnu uslugu</a>
-      </div>
-      <div class="col-md-4 mb-5">
-        <h2>Kontakt</h2>
+  <br>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    <div class="form_main">
+                <div class="form">
+                <h3>Zahtev za servisnu uslugu</h3>
+                <hr>
+                <form action="contact_send_mail.php" method="post" id="contactFrm" name="contactFrm">
+                    <input type="text" required="" placeholder="Tip uređaja" value="" name="tip" class="txt">
+                    <input type="text" required="" placeholder="Šifra uređaja" value="" name="sifra" class="txt">
+                    <textarea placeholder="Opis problema" name="mess" type="text" class="txt_3"></textarea>
+                    <label>Stepen prioriteta:</label> &nbsp;
+                      <input type="radio" name="1" checked="true"> 1 
+                      <input type="radio" name="2"> 2 
+                      <input type="radio" name="3"> 3 
+                      <input type="radio" name="4"> 4 
+                      <input type="radio" name="5"> 5 
+                    <br>
+                    <input type="submit" value="Pošalji" name="submit" class="txt2">
+                </form>
+                </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        
+    </div>
+    <div class="col-md-4 mb-5">
+        <h3>Kontakt</h3>
         <hr>
         <address>
           <strong>FU tech</strong>
@@ -106,16 +181,7 @@
         </address>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4 mb-5">
-        <img src="10.png">  
-      </div>
-      <div class="col-md-8 mb-5">
-        <img style="max-width: 90%" src="11.png">  
-      </div>
-    </div>
-    <br>
-  </div>
+</div>
   <!-- /.container -->
 
   <!-- Footer -->
