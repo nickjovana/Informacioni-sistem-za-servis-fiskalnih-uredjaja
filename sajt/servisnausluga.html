@@ -127,7 +127,7 @@
           &nbsp;
           <li class="nav-item">
             <button type="button" class="btn btn-info" data-toggle="dropdown">
-              <i class="fa fa-user" style="font-size:20px"></i>
+              <i onclick="location='profil.html'" class="fa fa-user" style="font-size:20px"></i>
             </button>
           </li>
         </ul>
@@ -145,9 +145,12 @@
                 <h3>Zahtev za servisnu uslugu</h3>
                 <hr>
                 <form action="contact_send_mail.php" method="post" id="contactFrm" name="contactFrm">
+                    <input type="text" required="" placeholder="Naslov" value="" name="tip" class="txt">
                     <input type="text" required="" placeholder="Tip uređaja" value="" name="tip" class="txt">
                     <input type="text" required="" placeholder="Šifra uređaja" value="" name="sifra" class="txt">
                     <textarea placeholder="Opis problema" name="mess" type="text" class="txt_3"></textarea>
+                    <br>
+                    <br>
                     <label>Stepen prioriteta:</label> &nbsp;
                       <input type="radio" name="1" checked="true"> 1 
                       <input type="radio" name="2"> 2 
