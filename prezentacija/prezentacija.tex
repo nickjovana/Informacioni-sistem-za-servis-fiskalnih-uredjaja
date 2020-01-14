@@ -1,0 +1,189 @@
+\documentclass[9pt]{beamer}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Use roboto Font (recommended)
+\usepackage[sfdefault]{roboto}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{smartdiagram}
+\usepackage{metalogo}
+\usepackage{multicol}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Define where theme files are located. ('/styles')
+\usepackage{styles/fluxmacros}
+\usefolder{styles}
+% Use Flux theme v0.1 beta
+% Available style: asphalt, blue, red, green, gray 
+\usetheme[style=blue]{flux}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Extra packages for the demo:
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{schemabloc}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Informations
+\title{Informacioni sistem}
+\subtitle{servisa za fiskalne uređaje}
+\author{Vladana Đorđević, Aleksandra Jovičić, Jovana Nikolić, Tijana Tošev}
+\institute{Matematički fakultet, Beograd}
+\date{\today}
+\titlegraphic{}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{document}
+
+\titlepage
+
+\begin{frame}
+ \frametitle{Sadržaj}
+ \tableofcontents
+\end{frame}
+
+\section{Analiza sistema}
+\begin{frame}{Analiza sistema}
+    \begin{columns}
+        \column{0.65\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth, height=5cm]{assets/DijagramKonteksta.png}    
+            \end{center}
+        \column{0.35\textwidth}
+        \begin{alertblock}{Akteri}
+        	\begin{itemize}
+        		\item \textbf{Korisnici}
+        		\item \textbf{Zaposleni}
+        		    \begin{itemize}
+        		        \item \textbf{Rukovodilac}
+            		    \item \textbf{Administracija}
+            		    \item \textbf{Serviseri}
+        	        \end{itemize}
+        	    \item \textbf{Poreska uprava}
+        	    \item \textbf{Proizvođači}
+        	\end{itemize}
+    	\end{alertblock}
+    \end{columns}
+\end{frame}
+
+\section{Slučajevi upotrebe}
+\begin{frame}{Slučajevi upotrebe}
+    \begin{center}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \begin{alertblock}{Korisnik}
+            \begin{itemize}
+                \item Registracija korisnika
+                \item Prijavljivanje korisnika
+                \item Online naručivanje proizvoda
+                \item Formiranje zahteva za servisnu uslugu
+                \item Ažuriranje informacija o korisniku
+            \end{itemize}
+            \end{alertblock}
+        \column{0.5\textwidth}
+            \begin{alertblock}{Administrator}
+            \begin{itemize}
+                \item Dodavanje novog uređaja u sistem
+                \item Dodavanje novog servisera u sistem
+                \item Ažuriranje postojećih informacija o dostupnim uređajima
+                \item Izrada fakture za plaćanje
+            \end{itemize}
+            \end{alertblock}
+        \end{columns}
+        \begin{columns}
+        \column{0.5\textwidth}
+            \begin{alertblock}{Rukovodilac}
+            \begin{itemize}
+                \item Naručivanje uređaja i rezervnih delova
+                \item Pisanje naloga
+                \item Priprema uređaja i fiskalizacija
+            \end{itemize}
+            \end{alertblock}
+        \column{0.5\textwidth}
+            \begin{alertblock}{Serviser}
+            \begin{itemize}
+                \item Izlazak na teren, održavanje i/ili popravka
+                \item Instalacija uređaja na mestu korišćenja
+                \item Unos radnog izveštaja
+            \end{itemize}
+            \end{alertblock}
+    \end{columns}
+    Poseban slučaj upotrebe koji bismo izdvojili - \textbf{\alert{Prodaja}}
+    \end{center}
+\end{frame}
+
+\subsection{Korisnik}
+\begin{frame}{Korisnik}{Registracija korisnika}
+    \begin{center}
+    \small{
+    \textbf{Kratak opis}: Unos podataka u sistem u svrhu kreiranja korisničkog naloga.}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=10cm, height=7cm]{assets/dijagramAktivnostiRegistracija.png}
+    \end{center}
+\end{frame}
+\subsection{Administrator}
+\begin{frame}{Administrator}{Dodavanje novog uređaja u sistem}
+    \begin{center}
+    \small{
+    \textbf{Kratak opis}: Unos podataka u sistem o novodobijenom uređaju.}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=10cm, height=6.5cm]{assets/dijagramSaradnje.jpg}
+    \end{center}
+\end{frame}
+\subsection{Rukovodilac}
+\subsection{Serviser}
+\begin{frame}{Serviser}{Priprema uređaja i fiskalizacija}
+    \begin{center}
+    \small{\textbf{Kratak opis}: Serviser testira i unosi podatke u uređaj potrebne za njegovo funkcionisanje. Poreska uprava vrši kontrolu uređaja.}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=10cm, height=4.2cm]{assets/bpmnFiskalizacija.png}
+    \end{center}
+\end{frame}
+\subsection{Prodaja}
+\begin{frame}{Prodaja}
+    \begin{center}
+    \small{\vspace*{-0.1cm}
+    \textbf{Kratak opis}: Korisnik kupuje uređaj koji se pre toga testira i fiskalizuje od strane servisa i poreske uprave.}
+    \end{center}
+    \vspace*{-0.3cm}
+    \begin{center}
+        \includegraphics[width=10cm, height=7cm]{assets/DijagramAktivnostiProdaje.png}
+    \end{center}
+\end{frame}
+
+\section{Baza podataka}
+\begin{frame}{Baza podataka}
+    \begin{center}
+        \includegraphics[width=10cm, height=7cm]{assets/bp4.png}
+    \end{center}
+\end{frame}
+
+\section{Predlog arhitekture sistema}
+\begin{frame}{Predlog arhitekture sistema}
+    \begin{center}
+        \includegraphics[width=8cm, height=6cm]{assets/ARHITEKTUR.png}
+    \end{center}
+\end{frame}
+
+\section{Korisnički interfejs}
+
+\begin{frame}{Korisnički interfejs}{Veb sajt}
+    \begin{center}
+        \includegraphics[width=10cm, height=6cm]{assets/fiskalniuredjaji.PNG}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Korisnički interfejs}{Desktop aplikacija}
+    \begin{center}
+        \includegraphics[width=10cm, height=6cm]{assets/APPadministratorDodajServ.png}
+    \end{center}
+\end{frame}
+
+\end{document}
